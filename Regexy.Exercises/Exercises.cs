@@ -7,7 +7,7 @@ namespace Regexy.Exercises
     public class Exercises
     {
         [TestMethod]
-        public void abc()
+        public void exercise1_abc()
         {
 
             var ex = new Exercise
@@ -37,7 +37,7 @@ namespace Regexy.Exercises
         }
 
         [TestMethod]
-        public void swedish_word()
+        public void exercise2_swedish_word()
         {
 
             var ex = new Exercise
@@ -69,7 +69,7 @@ namespace Regexy.Exercises
         }
 
         [TestMethod]
-        public void swedish_word_2()
+        public void exercise3_swedish_word_2()
         {
 
             var ex = new Exercise
@@ -100,7 +100,7 @@ namespace Regexy.Exercises
         }
 
         [TestMethod]
-        public void multiplication()
+        public void exercise4_multiplication()
         {
             var ex = new Exercise
             {
@@ -125,6 +125,35 @@ namespace Regexy.Exercises
             };
 
             string myRegexGuess = @"^\d+\*\d+$";
+
+            Engine.Test(myRegexGuess, ex);
+        }
+
+        [TestMethod]
+        public void exercise5_multiplication()
+        {
+            var ex = new Exercise
+            {
+                Name = "Multiplication II",
+                Description = "Same as above but allow blanks as well",
+
+                Examples = new List<Example>
+                {
+                    new MatchExample("3*4"),
+                    new MatchExample("7*      8"),
+                    new MatchExample("12 *8"),
+                    new MatchExample("  3*5"),
+                    new MatchExample("   111  *   2222    "),
+
+                    new NoMatchExample("3a*4"),
+                    new NoMatchExample("7#8"),
+                    new NoMatchExample("12*8a"),
+                    new NoMatchExample("*5"),
+                    new NoMatchExample("1112222"),
+                }
+            };
+
+            string myRegexGuess = @"^\s*\d+\s*\*\s*\d+\s*$";
 
             Engine.Test(myRegexGuess, ex);
         }
