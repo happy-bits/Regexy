@@ -26,5 +26,35 @@ namespace Regexy.Exercises
             var result = Engine.SearchReplace(ex, searchFor, replaceWith);
             Assert.IsTrue(result.Correct);
         }
+
+        [TestMethod]
+        public void remove_name()
+        {
+            /*
+            
+            Remove Name="...."
+
+            E.g
+
+                [Display(Name = "Tilldela aktiviteten till denna roll.", Order = 2)] 
+
+            Should be:
+
+                [Display(Order = 2)]              
+             
+             */
+            var ex = new SearchReplaceExercise
+            {
+                Id = 2,
+                Name = "Remove name",
+                Description = "",
+            };
+
+            var searchFor = @"\(\s*Name\s*=\s*""[^""]*""[,\s]*";
+            var replaceWith = "(";
+
+            var result = Engine.SearchReplace(ex, searchFor, replaceWith);
+            Assert.IsTrue(result.Correct);
+        }
     }
 }
