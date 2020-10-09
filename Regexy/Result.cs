@@ -1,4 +1,4 @@
-﻿namespace Regexy.Test
+﻿namespace Regexy
 {
     public class Result
     {

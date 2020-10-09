@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Regexy", "Regexy\Regexy.csproj", "{24FCFD20-BA40-4172-9F78-1E1A0A008A4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Regexy.Test", "Regexy.Test\Regexy.Test.csproj", "{C835F1C4-970E-4576-8F12-6A345D8C0A67}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Regexy.Exercises", "Regexy.Exercises\Regexy.Exercises.csproj", "{724D82DB-9C8F-4BDA-8226-1A6C8A8AAF77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{24FCFD20-BA40-4172-9F78-1E1A0A008A4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24FCFD20-BA40-4172-9F78-1E1A0A008A4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24FCFD20-BA40-4172-9F78-1E1A0A008A4B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C835F1C4-970E-4576-8F12-6A345D8C0A67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C835F1C4-970E-4576-8F12-6A345D8C0A67}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C835F1C4-970E-4576-8F12-6A345D8C0A67}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C835F1C4-970E-4576-8F12-6A345D8C0A67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{724D82DB-9C8F-4BDA-8226-1A6C8A8AAF77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{724D82DB-9C8F-4BDA-8226-1A6C8A8AAF77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{724D82DB-9C8F-4BDA-8226-1A6C8A8AAF77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{724D82DB-9C8F-4BDA-8226-1A6C8A8AAF77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

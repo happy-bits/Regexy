@@ -3,11 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace Regexy.Test
+namespace Regexy
 {
     public static class Engine
     {
-        internal static void Test(string myRegexGuess, Exercise ex, bool doAssert=true)
+        public static void Test(string myRegexGuess, Exercise ex, bool doAssert=true)
         {
             var results = Run(myRegexGuess, ex);
 
