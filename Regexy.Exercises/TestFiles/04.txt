@@ -1,0 +1,14 @@
+﻿<div id="wrapper-front">
+
+    <div class="row">
+        <div id="content" class="small-12 columns" role="main">
+
+        </div>
+    </div>
+
+    <article id="post-1919" class="post-1919 post type-post">
+        <div id="content" class="small-12 medium-6" role="main">
+        </div>
+    </article>
+
+</div>

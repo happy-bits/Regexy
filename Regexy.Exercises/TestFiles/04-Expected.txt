@@ -1,0 +1,14 @@
+﻿<div>
+
+    <div class="row">
+        <div class="small-12 columns" role="main">
+
+        </div>
+    </div>
+
+    <article class="post-1919 post type-post">
+        <div class="small-12 medium-6" role="main">
+        </div>
+    </article>
+
+</div>

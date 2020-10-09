@@ -104,5 +104,22 @@ namespace Regexy.Exercises
             var result = Engine.SearchReplace(ex, searchFor, replaceWith);
             Assert.IsTrue(result.Correct);
         }
+
+        [TestMethod]
+        public void remove_id()
+        {
+
+            var ex = new SearchReplaceExercise
+            {
+                Id = 4,
+                Name = "Remove ID attributes",
+            };
+
+            var searchFor = @" ?id="".*?""";
+            var replaceWith = "";
+
+            var result = Engine.SearchReplace(ex, searchFor, replaceWith);
+            Assert.IsTrue(result.Correct);
+        }
     }
 }
