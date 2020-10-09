@@ -157,5 +157,39 @@ namespace Regexy.Exercises
 
             Engine.Test(myRegexGuess, ex);
         }
+
+        [TestMethod]
+        public void exercise6_social_security_number()
+        {
+            var ex = new Exercise
+            {
+                Name = "Social security number",
+                Description = "",
+
+                Examples = new List<Example>
+                {
+                    new MatchExample("19750905-1234"),
+                    new MatchExample("197509051234"),
+                    new MatchExample("750905-1234"),
+                    new MatchExample("750905-1234"),
+                    new MatchExample("750905-1234"),
+
+                    new NoMatchExample(" 19750905-1234"),
+                    new NoMatchExample("19750905-1234 X"),
+                    new NoMatchExample("AAAAAAAA-AAAA"),
+                    new NoMatchExample("9750905-1234"),
+                    new NoMatchExample("19750905--1234"),
+                    new NoMatchExample("1975090-51234"),
+                    new NoMatchExample("19750905-12344"),
+                    new NoMatchExample("1975090512344"),
+                    new NoMatchExample("1975090512s4"),
+                    new NoMatchExample("750-905-134"),
+                }
+            };
+
+            string myRegexGuess = @"^(\d{6}|\d{8})-?\d{4}$";
+
+            Engine.Test(myRegexGuess, ex);
+        }
     }
 }
