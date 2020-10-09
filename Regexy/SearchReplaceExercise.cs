@@ -18,7 +18,7 @@ namespace Regexy
             if (id < 10)
                 zeros = "0";
 
-            return $"{zeros}{id}{suffix}.txt";
+            return $"TestFiles\\{zeros}{id}{suffix}.txt";
         }
 
     }

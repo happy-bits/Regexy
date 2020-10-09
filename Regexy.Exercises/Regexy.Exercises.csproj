@@ -18,22 +18,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="01-Expected.txt">
+    <None Update="TestFiles\01-Expected.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="01.txt">
+    <None Update="TestFiles\01.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="03-Expected.txt">
+    <None Update="TestFiles\03-Expected.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="03.txt">
+    <None Update="TestFiles\03.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="02-Expected.txt">
+    <None Update="TestFiles\02-Expected.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="02.txt">
+    <None Update="TestFiles\02.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
