@@ -67,5 +67,36 @@ namespace Regexy.Exercises
 
             Engine.Test(myRegexGuess, ex);
         }
+
+        [TestMethod]
+        public void swedish_word_2()
+        {
+
+            var ex = new Exercise
+            {
+                Name = "Swedish word 2",
+                Description = "Same but only allow uppercase on the first character",
+
+                Examples = new List<Example>
+                {
+                    new MatchExample("äpple"),
+                    new MatchExample("Päron"),
+                    new MatchExample("traktor"),
+                    new MatchExample("ö"),
+                    new MatchExample("Ö"),
+
+                    new NoMatchExample("$"),
+                    new NoMatchExample("123"),
+                    new NoMatchExample("trakt8r"),
+                    new NoMatchExample("oscèr"),
+                    new NoMatchExample("PäRON"),
+                    new NoMatchExample("trAktor"),
+                }
+            };
+
+            string myRegexGuess = "^([A-ZÅÄÖ]|[A-ZÅÄÖ][a-zåäö]+|[a-zåäö]+)$";
+
+            Engine.Test(myRegexGuess, ex);
+        }
     }
 }
