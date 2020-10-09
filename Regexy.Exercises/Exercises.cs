@@ -31,9 +31,9 @@ namespace Regexy.Exercises
                 }
             };
 
-            string myRegexGuess = "^[abc]{3}";
+            string myRegexGuess = "^[abc]{3}$";
 
-            Engine.Test(myRegexGuess, ex, false);
+            Engine.Test(myRegexGuess, ex);
         }
 
         [TestMethod]
@@ -63,7 +63,7 @@ namespace Regexy.Exercises
                 }
             };
 
-            string myRegexGuess = "WRITE YOUR REGEX HERE";
+            string myRegexGuess = "^[a-zåäöA-ZÅÄÖ]+$";
 
             Engine.Test(myRegexGuess, ex);
         }
@@ -94,7 +94,7 @@ namespace Regexy.Exercises
                 }
             };
 
-            string myRegexGuess = "WRITE YOUR REGEX HERE";
+            string myRegexGuess = "^([A-ZÅÄÖ]|[A-ZÅÄÖ][a-zåäö]+|[a-zåäö]+)$";
 
             Engine.Test(myRegexGuess, ex);
         }
@@ -124,7 +124,7 @@ namespace Regexy.Exercises
                 }
             };
 
-            string myRegexGuess = "WRITE YOUR REGEX HERE";
+            string myRegexGuess = @"^\d+\*\d+$";
 
             Engine.Test(myRegexGuess, ex);
         }
@@ -146,8 +146,8 @@ namespace Regexy.Exercises
                     new MatchExample("   111  *   2222    "),
 
                     new NoMatchExample("3a*4"),
-                    new MatchExample("1 2*56"),
-                    new MatchExample("12*5 6"),
+                    new NoMatchExample("1 2*56"),
+                    new NoMatchExample("12*5 6"),
                     new NoMatchExample("7#8"),
                     new NoMatchExample("12*8a"),
                     new NoMatchExample("*5"),
@@ -155,7 +155,7 @@ namespace Regexy.Exercises
                 }
             };
 
-            string myRegexGuess = "WRITE YOUR REGEX HERE";
+            string myRegexGuess = @"^\s*\d+\s*\*\s*\d+\s*$";
 
             Engine.Test(myRegexGuess, ex);
         }
@@ -189,7 +189,7 @@ namespace Regexy.Exercises
                 }
             };
 
-            string myRegexGuess = "WRITE YOUR REGEX HERE";
+            string myRegexGuess = @"^(\d{6}|\d{8})-?\d{4}$";
 
             Engine.Test(myRegexGuess, ex);
         }
@@ -218,7 +218,7 @@ namespace Regexy.Exercises
                 }
             };
 
-            string myRegexGuess = "WRITE YOUR REGEX HERE";
+            string myRegexGuess = @"^\d{3}-?\d{7}$";
 
             Engine.Test(myRegexGuess, ex);
         }
@@ -252,7 +252,7 @@ namespace Regexy.Exercises
                 }
             };
 
-            string myRegexGuess = "WRITE YOUR REGEX HERE";
+            string myRegexGuess = @"^[ABC][A-Z]\-(500|[0-4][0-9]{2})$";
 
             Engine.Test(myRegexGuess, ex);
 
