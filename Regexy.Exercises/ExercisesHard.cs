@@ -60,6 +60,7 @@ namespace Regexy.Exercises
                     new MatchExample("aaabooaaaaa"),
                     new MatchExample("aaaaaboooo"),
 
+                    new NoMatchExample("bob"),
                     new NoMatchExample("aaabobaaaaa"),
                     new NoMatchExample("bbbbobbb"),
                     new NoMatchExample("abbobcdefgh"),
@@ -71,6 +72,57 @@ namespace Regexy.Exercises
             string myRegexGuess = "^(?!.*bob.*)[a-z]+$"; 
 
             Engine.Test(myRegexGuess, ex);
+
+        }
+
+        [TestMethod]
+        public void exercise3_five_letters()
+        {
+            // Hint: use "positive lookahead"
+            var ex = new Exercise
+            {
+                Description = "Five letters (a-z). One of the letters has to be an 'a'",
+
+                Examples = new List<Example>
+                {
+                    new MatchExample("aaaaa"),
+                    new MatchExample("aaaay"),
+                    new MatchExample("waaaa"),
+                    new MatchExample("aeagw"),
+                    new MatchExample("aeagw"),
+                    new MatchExample("aazeq"),
+                    new MatchExample("zaare"),
+                    new MatchExample("rwgea"),
+                    new MatchExample("qaqfq"),
+
+                    new NoMatchExample("aaa"),
+                    new NoMatchExample("aaaa"),
+                    new NoMatchExample("aaaa1"),
+                    new NoMatchExample("1aaaa"),
+                    new NoMatchExample("yyyyy"),
+                    new NoMatchExample("wwtrr"),
+                    new NoMatchExample("qeegw"),
+                    new NoMatchExample("weegw"),
+                    new NoMatchExample("sfzeq"),
+                    new NoMatchExample("ztyre"),
+                    new NoMatchExample("rwgee"),
+                    new NoMatchExample("qdffr"),
+                }
+            };
+
+            string myRegexGuess = "^(?=.*a)[a-z]{5}$";
+            string myRegexGuess_Alternative = "^(?=[a-z]{5})(?=.*a).*$";
+            
+            Engine.Test(myRegexGuess, ex);
+            Engine.Test(myRegexGuess_Alternative, ex);
+
+            /*
+             
+            Explanation
+
+                (?=.*a)   ==> look ahead. Must contain an "a"
+                [a-z]{5}  ==> must have five letters             
+             */
 
         }
 
