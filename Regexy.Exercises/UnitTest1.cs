@@ -98,5 +98,35 @@ namespace Regexy.Exercises
 
             Engine.Test(myRegexGuess, ex);
         }
+
+        [TestMethod]
+        public void multiplication()
+        {
+            var ex = new Exercise
+            {
+                Name = "Multiplication",
+                Description = "Multiplication of two numbers",
+
+                Examples = new List<Example>
+                {
+                    new MatchExample("3*4"),
+                    new MatchExample("7*8"),
+                    new MatchExample("12*8"),
+                    new MatchExample("3*5"),
+                    new MatchExample("111*2222"),
+
+                    new NoMatchExample("3a*4"),
+                    new NoMatchExample("3 *4"),
+                    new NoMatchExample("7#8"),
+                    new NoMatchExample("12*8a"),
+                    new NoMatchExample("*5"),
+                    new NoMatchExample("1112222"),
+                }
+            };
+
+            string myRegexGuess = @"^\d+\*\d+$";
+
+            Engine.Test(myRegexGuess, ex);
+        }
     }
 }
