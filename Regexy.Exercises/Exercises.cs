@@ -191,5 +191,68 @@ namespace Regexy.Exercises
 
             Engine.Test(myRegexGuess, ex);
         }
+
+        [TestMethod]
+        public void exercise7_mobile_phone_number()
+        {
+            var ex = new Exercise
+            {
+                Name = "Mobile",
+                Description = "After three numbers it could be a dash. Total number of numbers: 10",
+
+                Examples = new List<Example>
+                {
+                    new MatchExample("073-6401023"),
+                    new MatchExample("0736401023"),
+
+                    new NoMatchExample("073-64010231"),
+                    new NoMatchExample("07364010231"),
+                    new NoMatchExample("073--6401023"),
+                    new NoMatchExample("1073-6401023"),
+                    new NoMatchExample("10736401023"),
+                    new NoMatchExample("73-6401023"),
+                    new NoMatchExample("736401023"),
+                }
+            };
+
+            string myRegexGuess = @"^\d{3}-?\d{7}$";
+
+            Engine.Test(myRegexGuess, ex);
+        }
+
+        [TestMethod]
+        public void exercise8_product_number()
+        {
+            var ex = new Exercise
+            {
+                Name = "Mobile",
+                Description = "Two letters + dash + three numbers. The numbers can be max 500. The first letter have to be A, B or C",
+
+                Examples = new List<Example>
+                {
+                    new MatchExample("AB-100"),
+                    new MatchExample("BZ-499"),
+                    new MatchExample("CD-500"),
+
+                    new NoMatchExample("ABB-100"),
+                    new NoMatchExample("AB100"),
+                    new NoMatchExample("BZ-4999"),
+                    new NoMatchExample("CD--500"),
+                    new NoMatchExample("B-100"),
+                    new NoMatchExample("BZ-49"),
+                    new NoMatchExample("C-0"),
+                    new NoMatchExample("DB-100"),
+                    new NoMatchExample("EZ-499"),
+                    new NoMatchExample("AB-70"),
+                    new NoMatchExample("BZ-699"),
+                    new NoMatchExample("CD-501"),
+                }
+            };
+
+            string myRegexGuess = @"^[ABC][A-Z]\-(500|[0-4][0-9]{2})$";
+
+            Engine.Test(myRegexGuess, ex);
+
+        }
     }
 }
