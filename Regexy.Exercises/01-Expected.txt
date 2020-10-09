@@ -1,0 +1,14 @@
+﻿a 
+{
+font:Arial; color:red
+}
+
+h1 
+{
+padding:10px
+}
+
+h3 
+{
+margin:20px; padding-right:20px
+}

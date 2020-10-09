@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text.RegularExpressions;
 
 namespace Regexy
@@ -20,14 +21,9 @@ namespace Regexy
                 }
                 else
                 {
-                    if (result.ShouldMatch)
-                    {
-                        Console.WriteLine($"Not correct --------> {result.Example} should match");
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Not correct--------> {result.Example} should not match");
-                    }
+                    var not = result.ShouldMatch ? " not" : "";
+
+                    Console.WriteLine($"Not correct --------> {result.Example}{not} should match");
                 }
 
                 if (doAssert)
@@ -35,6 +31,23 @@ namespace Regexy
                     Assert.IsTrue(result.Correct);
                 }
             }
+        }
+
+        public static SearchReplaceResult SearchReplace(SearchReplaceExercise ex, string searchFor, string replaceWith)
+        {
+            var input = File.ReadAllText(ex.FileName).Replace("\r\n", "\n");
+            var expected = File.ReadAllText(ex.ExpectedFileName).Replace("\r\n", "\n");
+
+            var replacedText = Regex.Replace(input, searchFor, replaceWith);
+
+            File.WriteAllText(ex.ResultFileName, replacedText);
+
+            return new SearchReplaceResult
+            {
+                Input = input,
+                Expected = expected,
+                ReplacedText = replacedText
+            };
         }
 
         private static IEnumerable<Result> Run(string myRegexGuess, Exercise ex)

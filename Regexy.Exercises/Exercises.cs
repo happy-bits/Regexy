@@ -31,9 +31,9 @@ namespace Regexy.Exercises
                 }
             };
 
-            string myRegexGuess = "WRITE YOUR REGEX HERE";
+            string myRegexGuess = "^[abc]{3}";
 
-            Engine.Test(myRegexGuess, ex);
+            Engine.Test(myRegexGuess, ex, false);
         }
 
         [TestMethod]
@@ -146,6 +146,8 @@ namespace Regexy.Exercises
                     new MatchExample("   111  *   2222    "),
 
                     new NoMatchExample("3a*4"),
+                    new MatchExample("1 2*56"),
+                    new MatchExample("12*5 6"),
                     new NoMatchExample("7#8"),
                     new NoMatchExample("12*8a"),
                     new NoMatchExample("*5"),
@@ -204,6 +206,7 @@ namespace Regexy.Exercises
                 {
                     new MatchExample("073-6401023"),
                     new MatchExample("0736401023"),
+                    new NoMatchExample("0736-4010231"),
 
                     new NoMatchExample("073-64010231"),
                     new NoMatchExample("07364010231"),
