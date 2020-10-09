@@ -31,7 +31,7 @@ namespace Regexy.Exercises
                 }
             };
 
-            string myRegexGuess = "^[abc]{3}$";
+            string myRegexGuess = "WRITE YOUR REGEX HERE";
 
             Engine.Test(myRegexGuess, ex);
         }
@@ -63,7 +63,7 @@ namespace Regexy.Exercises
                 }
             };
 
-            string myRegexGuess = "^[a-zåäöA-ZÅÄÖ]+$";
+            string myRegexGuess = "WRITE YOUR REGEX HERE";
 
             Engine.Test(myRegexGuess, ex);
         }
@@ -94,7 +94,7 @@ namespace Regexy.Exercises
                 }
             };
 
-            string myRegexGuess = "^([A-ZÅÄÖ]|[A-ZÅÄÖ][a-zåäö]+|[a-zåäö]+)$";
+            string myRegexGuess = "WRITE YOUR REGEX HERE";
 
             Engine.Test(myRegexGuess, ex);
         }
@@ -124,7 +124,7 @@ namespace Regexy.Exercises
                 }
             };
 
-            string myRegexGuess = @"^\d+\*\d+$";
+            string myRegexGuess = "WRITE YOUR REGEX HERE";
 
             Engine.Test(myRegexGuess, ex);
         }
@@ -153,7 +153,7 @@ namespace Regexy.Exercises
                 }
             };
 
-            string myRegexGuess = @"^\s*\d+\s*\*\s*\d+\s*$";
+            string myRegexGuess = "WRITE YOUR REGEX HERE";
 
             Engine.Test(myRegexGuess, ex);
         }
@@ -187,7 +187,7 @@ namespace Regexy.Exercises
                 }
             };
 
-            string myRegexGuess = @"^(\d{6}|\d{8})-?\d{4}$";
+            string myRegexGuess = "WRITE YOUR REGEX HERE";
 
             Engine.Test(myRegexGuess, ex);
         }
@@ -215,7 +215,7 @@ namespace Regexy.Exercises
                 }
             };
 
-            string myRegexGuess = @"^\d{3}-?\d{7}$";
+            string myRegexGuess = "WRITE YOUR REGEX HERE";
 
             Engine.Test(myRegexGuess, ex);
         }
@@ -249,7 +249,7 @@ namespace Regexy.Exercises
                 }
             };
 
-            string myRegexGuess = @"^[ABC][A-Z]\-(500|[0-4][0-9]{2})$";
+            string myRegexGuess = "WRITE YOUR REGEX HERE";
 
             Engine.Test(myRegexGuess, ex);
 

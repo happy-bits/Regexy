@@ -13,12 +13,22 @@ namespace Regexy
 
             foreach (var result in results)
             {
-                var correct = result.Correct ? "Correct" : "NotCorrect";
-                var shouldMatch = result.ShouldMatch ? "ShouldMatch" : "ShouldNotMatch";
-                var ismatch = result.IsMatch ? "IsMatch" : "NoMatch";
-                var example = result.Example;
-
-                Console.WriteLine($"{correct,-30}{shouldMatch,-30}{ismatch,-30}{example,-30}");
+                
+                if (result.Correct)
+                {
+                    Console.WriteLine($"Correct! {result.Example}");
+                }
+                else
+                {
+                    if (result.ShouldMatch)
+                    {
+                        Console.WriteLine($"Not correct --------> {result.Example} should match");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Not correct--------> {result.Example} should not match");
+                    }
+                }
 
                 if (doAssert)
                 {
