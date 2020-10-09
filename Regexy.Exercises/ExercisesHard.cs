@@ -45,5 +45,34 @@ namespace Regexy.Exercises
             */
         }
 
+        [TestMethod]
+        public void exercise2_no_bob_inside()
+        {
+            var ex = new Exercise
+            {
+                Description= "Don't allow 'bob' inside of text",
+
+                Examples = new List<Example>
+                {
+                    new MatchExample("aaaaaaaa"),
+                    new MatchExample("bbbbbbb"),
+                    new MatchExample("abcdefgh"),
+                    new MatchExample("aaabooaaaaa"),
+                    new MatchExample("aaaaaboooo"),
+
+                    new NoMatchExample("aaabobaaaaa"),
+                    new NoMatchExample("bbbbobbb"),
+                    new NoMatchExample("abbobcdefgh"),
+                    new NoMatchExample("bobaaaaa"),
+                    new NoMatchExample("aaaaabob"),
+                }
+            };
+
+            string myRegexGuess = "^(?!.*bob.*)[a-z]+$"; 
+
+            Engine.Test(myRegexGuess, ex);
+
+        }
+
     }
 }
